@@ -1,11 +1,74 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 h1 {
     color: white;
     font-size: 100px;
     padding-left: 5%;
+    font-family: 'Roboto', sans-serif;
 }
 
-div {
+p {
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+#intro {
     background-image: linear-gradient(60deg, rgb(0, 47, 255) , rgb(0, 153, 255));
     padding-top: 6%;
     padding-bottom: 6%;
+    width: auto;
 }
+
+#desc {
+    background-color: black;
+    /* border-radius: 20px; */
+    padding: 6%;
+    width: 60%;
+    /* margin-top: 1%;
+    margin-bottom: 1%; */
+    backdrop-filter: blur(10px);
+}
+
+#sitemap {
+    background-color: gray;
+    display: flex;
+}
+
+a {
+    color: black;
+    text-align: center;
+    margin: 5%;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar:hover {
+    color: rgba(255, 255, 255, 0.815);
+}
+
+ nav {
+    text-align: center;
+    margin: 20px;
+ }
+
+ #logo {
+    font-size: 40px;
+    margin-right: 20%;
+    border-style: solid;
+    padding: 5px;
+ }
+
+ .sitemap_links {
+    font-size: 20px;
+ }
