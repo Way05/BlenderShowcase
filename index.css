@@ -14,6 +14,7 @@ p {
     color: white;
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
 body {
@@ -29,18 +30,62 @@ body {
     width: auto;
 }
 
+div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#bg {
+    background-image: url("images/blender.png");
+    height: 100%;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.col {
+    float: left;
+    width: 50%;
+}
+
+#button {
+    background-image: linear-gradient(60deg, black, rgb(59, 59, 59));
+    border-radius: 5px;
+    
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 10%;
+    /* margin-right: 5%; */
+}
+
 #desc {
-    background-color: black;
-    /* border-radius: 20px; */
-    padding: 6%;
-    width: 60%;
-    /* margin-top: 1%;
-    margin-bottom: 1%; */
-    backdrop-filter: blur(10px);
+    background-image: linear-gradient(60deg, black, rgb(59, 59, 59));
+    /* backdrop-filter: blur(10px); */
+    border-radius: 5px;
+
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* margin-left: 5%; */
+    width: 20%;
+
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #sitemap {
-    background-color: gray;
+    background-color: black;
+    padding: 5%;
     display: flex;
 }
 
