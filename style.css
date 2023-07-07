@@ -8,6 +8,27 @@ html, body {
     user-select: none;
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.delay {
+    transition-delay: 100ms;
+}
+
+/* @media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+} */
+
 h1 {
     color: black;
     font-size: 100px;
@@ -29,6 +50,10 @@ hr {
     margin-top: 1%;
 }
 
+section {
+    height: fit-content;
+}
+
 p {
     color: black;
     font-size: 30px;
@@ -46,7 +71,6 @@ a {
     font-weight: 600;
     line-height: 150px;
     width: 100%;
-
     
     -webkit-user-drag: none;
 }
@@ -63,6 +87,9 @@ a {
 
 div {
     width: 100%;
+
+    position: relative;
+    display: inline-block;
 }
 
 #teapot {
@@ -72,6 +99,7 @@ div {
     background-position: 50%, 50%;
 
     height: 100%;
+    width: 100%;
 
     align-items: center;
 
