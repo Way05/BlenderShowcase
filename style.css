@@ -29,7 +29,7 @@ html, body {
     }
 } */
 
-h1 {
+#intro h1 {
     color: black;
     font-size: 100px;
     font-family: 'Roboto', sans-serif;
@@ -54,7 +54,7 @@ section {
     height: fit-content;
 }
 
-p {
+#intro p {
     color: black;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
@@ -62,17 +62,6 @@ p {
     padding-bottom: 2%;
     margin-left: 5%;
     margin-bottom: 0;
-}
-
-a {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-    line-height: 150px;
-    width: 100%;
-    
-    -webkit-user-drag: none;
 }
 
 #intro {
@@ -109,10 +98,19 @@ div {
 #button {
     text-align: center;
     color: white;
+    background-color: black;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 150px;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
 
-    backdrop-filter: blur(10px);
+    -webkit-user-drag: none;
+
+    /* backdrop-filter: blur(10px); */
 
     transition: ease-in 0.2s;
 }
@@ -120,7 +118,8 @@ div {
 #button:hover {
     line-height: 200px;
     font-size: 25px;
-    backdrop-filter: blur(20px);
+    width: 20%;
+    /* backdrop-filter: blur(20px); */
 }
 
 #sitemap {
