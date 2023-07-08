@@ -80,3 +80,31 @@ img {
     opacity: 1;
     transform: translateX(0);
 }
+
+#slideshow {
+    position: relative;
+    display: flex;
+}
+
+#slideshow img {
+    transition: ease-out 0.5s;
+}
+
+#indicators {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+button {
+    width: 10%;
+    height: 3px;
+    margin: 15px;
+    margin-top: 53%;
+
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+
+    transition: ease-out 0.2s;
+}
