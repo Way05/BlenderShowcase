@@ -20,12 +20,15 @@ function showDiv(n) {
         images[i].style.opacity = "0";
     }
 
-    setTimeout(function() {for(var i = 0; i < images.length; i++) {
+    setTimeout(function() {
+    for(var i = 0; i < images.length; i++) {
         images[i].style.display = "none";
     }
     images[slideIndex - 1].style.display = "block";
-    }, 500);
-    images[slideIndex - 1].style.opacity = "1";
+    }, 300);
+    setTimeout(function() {
+        images[slideIndex - 1].style.opacity = "1";
+    }, 305);
 
     for(var i = 0; i < buttons.length; i++) {
         buttons[i].style.width = "10%";

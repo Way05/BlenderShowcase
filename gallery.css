@@ -80,7 +80,7 @@ img {
 }
 
 #slideshow img {
-    transition: ease-out 0.5s;
+    transition: ease-out 0.3s;
 }
 
 #indicators {
