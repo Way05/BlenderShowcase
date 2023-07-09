@@ -76,7 +76,6 @@ img {
 
 #slideshow {
     position: relative;
-    display: flex;
 }
 
 #slideshow img {
@@ -86,6 +85,7 @@ img {
 #indicators {
     text-align: center;
     position: absolute;
+    bottom: 2%;
     width: 100%;
 }
 
@@ -93,11 +93,35 @@ button {
     width: 10%;
     height: 3px;
     margin: 15px;
-    margin-top: 53%;
 
     border: none;
     border-radius: 5px;
     background-color: gray;
 
     transition: ease-out 0.2s;
+}
+
+.sh {
+    display: flex;
+}
+.hidden {
+    display: block;
+    position: relative;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
