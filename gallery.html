@@ -12,8 +12,11 @@
 
     <title>3D Art</title>
 
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
     <script defer src="galleryOnLoadAnimation.js"></script>
-    <script defer src="slideshow.js"></script>
+    <!-- <script defer src="slideshow.js"></script> -->
+    <script defer src="imagePanels.js"></script>
 </head>
     <body>
         <a href="d2.html">xur</a>
@@ -24,16 +27,16 @@
             <p>Some finished art I made.</p>
         </section>
 
-        <div id="slideshow">
-            <img class="sh" src="images/anime_teapot.png">
-            <img class="sh hidden" src="images/teapot002.png">
-            <img class="sh hidden" src="images/teapot003.png">
+        <div id="tripleImage">
+            <div class="box" id="one"><img src="images/anime_teapot.png"></div>
+            <div class="box" id="two"><img src="images/teapot002.png"></div>
+            <div class="box" id="three"><img src="images/teapot003.png"></div>
 
-            <div id="indicators">
+            <!-- <div id="indicators">
                 <button onclick="setDiv(1)"></button>
                 <button onclick="setDiv(2)"></button>
                 <button onclick="setDiv(3)"></button>
-            </div>
+            </div> -->
         </div>
 
         <div class="row">

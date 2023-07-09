@@ -16,15 +16,15 @@ function showDiv(n) {
     if(n > images.length) {slideIndex = 1};
     if(n < 1) {slideIndex = images.length};
 
-    for(var i = 0; i < buttons.length; i++) {
-        buttons[i].style.width = "10%";
-        buttons[i].style.backgroundColor = "gray";
-    }
-    buttons[slideIndex - 1].style.width = "15%";
-    buttons[slideIndex - 1].style.backgroundColor = "white";
+    // for(var i = 0; i < buttons.length; i++) {
+    //     buttons[i].style.width = "10%";
+    //     buttons[i].style.backgroundColor = "gray";
+    // }
+    // buttons[slideIndex - 1].style.width = "15%";
+    // buttons[slideIndex - 1].style.backgroundColor = "white";
 
-    console.log(images[slideIndex - 1]);
-    console.log(slideIndex);
+    // console.log(images[slideIndex - 1]);
+    // console.log(slideIndex);
 }
 
 function carousel() {
