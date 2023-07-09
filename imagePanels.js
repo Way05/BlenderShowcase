@@ -4,18 +4,12 @@ var image3 = document.getElementById("three");
 
 var list = [image1, image2, image3];
 
-// image1.addEventListener("mouseover", () => image1.classList.add("expand"));
-// image1.addEventListener("mouseleave", () => image1.classList.remove("expand"));
-
-// image2.addEventListener("mouseover", () => image2.classList.add("expand"));
-// image2.addEventListener("mouseleave", () => image2.classList.remove("expand"));
-
-// image3.addEventListener("mouseover", () => image3.classList.add("expand"));
-// image3.addEventListener("mouseleave", () => image3.classList.remove("expand"));
-
 for(var i = 0; i < list.length; i++) {
-    list[i].addEventListener("mouseover", () => resize(enlarged, list[i]));
-    list[i].addEventListener("mouseleave", () => unResize(enlarged, list[i]));
+    (function() {
+        var element = list[i];
+        element.addEventListener("mouseover", () => resize(enlarged, element));
+        element.addEventListener("mouseleave", () => unResize(enlarged, element));
+    }());   
 }
 
 var enlarged;
@@ -24,16 +18,21 @@ function resize(bigImage, currImage) {
     if(enlarged == undefined) {
         currImage.classList.add("expand");
     } else {
-        bigImage.style.flex = "70%";
-        currImage.classList.add("expandS");
+        if(bigImage !== currImage) {
+            bigImage.style.flex = "70%";
+            // currImage.classList.add("expandS");
+            currImage.style.flex = "20%";
+        }
     }
 }
 function unResize(bigImage, currImage) {
     if(enlarged == undefined) {
         currImage.classList.remove("expand");
     } else {
-        bigImage.style.flex = "80%";
-        currImage.classList.remove("expandS");
+        if(bigImage !== currImage) {
+            bigImage.style.flex = "80%";
+            // // currImage.classList.remove("expandS");
+            currImage.style.flex = "10%";}
     }
 }
 
