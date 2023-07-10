@@ -89,9 +89,6 @@ img {
 .expand {
     flex: 35%;
 }
-.expandS {
-    flex: 20%;
-}
 
 /* #slideshow {
     position: relative;
