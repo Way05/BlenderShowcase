@@ -16,10 +16,8 @@ var image = document.getElementById("bg");
 var button = document.getElementById("button");
 
 button.addEventListener("mouseover", () => {
-    image.style.filter = "blur(5px)";
-    image.style.transform = "scale(1.01)";
+    image.style.filter = "brightness(50%)";
 })
 button.addEventListener("mouseleave", () => {
-    image.style.filter = "none";
-    image.style.transform = "scale(1)";
+    image.style.filter = "brightness(100%)";
 })
