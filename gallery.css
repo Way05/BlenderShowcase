@@ -7,14 +7,90 @@ html, body {
 
     user-select: none;
 
-    color: white;
+    color: black;
+}
+
+/* body::before,
+body::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  opacity: 40%;
+}
+
+body::before {
+  background: black;
+  filter: url(#grainy);
+} */
+
+#blobs {
+    display: flex;
+    height: 500px;
+    width: 500px;
+
+    margin-top: 3%;
+    position: relative;
+
+    /* filter: url(#grainy); */
+}
+.blob {
+    background-color: black;
+
+    border-radius: 100px;
+    filter: blur(60px);
+    opacity: 0.7;
+
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    height: 200px;
+    width: 200px;
+}
+.alpha {
+    background-color: lightblue;
+
+    animation: alpha 8s infinite ease;
+}
+.beta {
+    background-color: lightskyblue;
+    transform: translate(100px, 100px);
+
+    animation: beta 8s infinite ease;
+}
+.gamma {
+    background-color: aquamarine;
+    transform: translate(300px, 50px);
+
+    animation: gamma 8s infinite ease;
+}
+
+@keyframes alpha {
+    25% {top: 300px; left: 200px;}
+    50% {top: 400px; left: 200px;}
+    75% {top: 250px; left: 100px;}
+    100% {top: 200px; left: 100px;}
+}
+@keyframes beta {
+    50% {top: 10px; left: 150px;}
+    100% {top: 200px; left: 100px;}
+}
+@keyframes gamma {
+    25% {top: 300px; left: 200px;}
+    50% {top: 400px; left: 100px;}
+    75% {top: 350px; left: 0px;}
+    100% {top: 200px; left: 100px;}
 }
 
 h2 {
     font-size: 100px;
     font-family: 'Roboto', sans-serif;
 
-    margin-left: 5%;  
+    margin-left: 10%;  
 
     padding-top: 4%;
 }
@@ -23,23 +99,33 @@ p {
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
 
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 hr {
     width: 30%;
 
-    margin-top: 7%;
-    margin-left: 7%;
+    margin-top: 10%;
+    margin-left: 16%;
 }
 
 #topPanel {
     width: 100%;
     height: 80%;
 
-    background-color: black;
+    background-color: white;
+
+    display: flex;
+    flex-wrap: wrap;
 
     overflow: auto;
+}
+#topPanel div {
+    flex: 50%;
+    max-width: 50%;
+}
+#topText {
+    margin-top: 5%;
 }
 
 img {
