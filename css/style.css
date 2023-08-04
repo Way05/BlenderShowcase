@@ -78,7 +78,7 @@ hr {
 
 #intro {
     /* background-image: linear-gradient(60deg, rgb(0, 47, 255) , rgb(0, 153, 255)); */
-    background-image: url("svgs/waves_background.svg");
+    background-image: url("/svgs/waves_background.svg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
