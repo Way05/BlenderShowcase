@@ -16,47 +16,87 @@ var enlarged;
 
 function resize(bigImage, currImage) {
     if(enlarged == undefined) {
-        currImage.classList.add("expand");
+        currImage.classList.add("hoverFlex");
     } else {
         if(bigImage !== currImage) {
-            bigImage.style.flex = "70%";
+            bigImage.style.flexBasis = "70%";
             // currImage.classList.add("expandS");
-            currImage.style.flex = "20%";
+            currImage.style.flexBasis = "20%";
         }
     }
 }
 function unResize(bigImage, currImage) {
     if(enlarged == undefined) {
-        currImage.classList.remove("expand");
+        currImage.classList.remove("hoverFlex");
     } else {
         if(bigImage !== currImage) {
-            bigImage.style.flex = "80%";
+            bigImage.style.flexBasis = "80%";
             // // currImage.classList.remove("expandS");
-            currImage.style.flex = "10%";}
+            currImage.style.flexBasis = "10%";}
     }
 }
 
+function setAllFlex(flexSize) {
+    image1.style.flexBasis = flexSize;
+    image2.style.flexBasis = flexSize;
+    image3.style.flexBasis = flexSize;
+}
+function removeInlineFlex() {
+    image1.style.removeProperty("flex");
+    image2.style.removeProperty("flex");
+    image3.style.removeProperty("flex");
+
+}
 $(image1).on("click", function() {
-    image1.style.flex = "80%";
+    image1.classList.remove("hoverFlex");
+    
+    if(image1.style.flexBasis == "80%") {
+        setAllFlex("24%");
 
-    image2.style.flex = "10%";
-    image3.style.flex = "10%";
+        removeInlineFlex();
 
-    enlarged = image1;
+        enlarged = undefined;
+    } else {
+        image1.style.flexBasis = "80%";
+        image2.style.flexBasis = "10%";
+        image3.style.flexBasis = "10%";
+
+        enlarged = image1;
+    }
 });
 $(image2).on("click", function() {
-    image2.style.flex = "80%";
+    image2.classList.remove("hoverFlex");
 
-    image1.style.flex = "10%";
-    image3.style.flex = "10%";
+    if(image2.style.flexBasis == "80%") {
+        setAllFlex("24%");
 
-    enlarged = image2;
+        removeInlineFlex();
+
+        enlarged = undefined;
+    } else {
+        image2.style.flex = "80%";
+
+        image1.style.flex = "10%";
+        image3.style.flex = "10%";
+
+        enlarged = image2;
+    }
 });
 $(image3).on("click", function() {
-    image3.style.flex = "80%";
+    image3.classList.remove("hoverFlex");
 
-    image2.style.flex = "10%";
-    image1.style.flex = "10%";
+    if(image3.style.flexBasis == "80%") {
+        setAllFlex("24%");
 
-    enlarged = image3;
+        removeInlineFlex();
+
+        enlarged = undefined;
+    } else {
+        image3.style.flex = "80%";
+
+        image2.style.flex = "10%";
+        image1.style.flex = "10%";
+
+        enlarged = image3;
+    }
 });

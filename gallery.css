@@ -106,7 +106,7 @@ hr {
     width: 30%;
 
     margin-top: 10%;
-    margin-left: 16%;
+    margin-left: 12%;
 }
 
 #topPanel {
@@ -125,7 +125,37 @@ hr {
     max-width: 50%;
 }
 #topText {
-    margin-top: 5%;
+    margin-top: 2%;
+}
+
+#buttonContainer {
+    margin-left: 12%;
+    margin-top: 10%;
+
+    display: flex;
+    gap: 50px;
+
+    text-align: center;
+}
+#buttonContainer a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    color: black;
+
+    padding: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+
+    background-color: white;
+
+    transition: ease-out 0.2s;
+}
+#buttonContainer a:hover {
+    background-color: lightgray;
 }
 
 img {
@@ -193,8 +223,14 @@ img {
     
     object-fit: cover;
 }
+.hoverFlex {
+    flex-basis: 35%;
+}
 .expand {
-    flex: 35%;
+    flex-basis: 80%;
+}
+.shrink {
+    flex-basis: 10%;
 }
 
 /* #slideshow {

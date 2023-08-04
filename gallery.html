@@ -19,14 +19,17 @@
     <script defer src="imagePanels.js"></script>
 </head>
     <body>
-        <a href="d2.html">xur</a>
-        <a href="index.html">home</a>
 
         <div id="topPanel">
-            <div id="topText">
+            <div class="hiddenLeft" id="topText">
                 <h2>Gallery</h2>
                 <p>Some finished art I made.</p>
                 <hr>
+
+                <div id="buttonContainer">
+                    <a href="index.html">home</a>
+                    <a href="d2.html">xur</a>
+                </div>
             </div>
 
             <div id="blobs">
@@ -48,7 +51,7 @@
             </div> -->
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col left">
                 <img class="hiddenLeft" src="images/FINALBLENDERRENDERROOMLETSGOOOO.png">
                 <img class="hiddenLeft" src="images/test_render.png">
@@ -60,26 +63,7 @@
                 <img class="hiddenRight" src="images/test_render (1).png">
                 <img class="hiddenRight" src="images/derp.png">
             </div>
-        </div>
+        </div> -->
         
     </body>
-        <svg>
-            <!-- <filter id="grainy">
-                <feTurbulence
-                    type="turbulence"
-                    baseFrequency="0.6"
-                />
-            </filter> -->
-            <filter id='grainy'>
-                <feTurbulence 
-                  type='fractalNoise' 
-                  baseFrequency='0.6' 
-                  stitchTiles='stitch'/>
-                 <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-                    <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
-                    <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
-              </filter>
-            <!-- <path fill="#F2F4F8" d="M52.1,-54.1C63.7,-40.6,66.5,-20.3,64.1,-2.4C61.7,15.6,54.2,31.1,42.7,42.7C31.1,54.3,15.6,61.9,-3.8,65.7C-23.3,69.6,-46.5,69.7,-58.7,58.1C-70.8,46.5,-71.8,23.3,-70.4,1.4C-69,-20.4,-65.1,-40.8,-53,-54.4C-40.8,-67.9,-20.4,-74.5,-0.1,-74.4C20.3,-74.4,40.6,-67.6,52.1,-54.1Z" filter="url(#grainy)"/> -->
-        </svg>
 </html>
-
