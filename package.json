@@ -1,5 +1,6 @@
 {
   "dependencies": {
     "jquery": "^3.7.0"
-  }
+  },
+  “homepage”: “https://way05.github.io/BlenderShowcaseWebsite/”
 }
