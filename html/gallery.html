@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" href="/css/gallery.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>3D Art</title>
 
@@ -18,53 +21,54 @@
     <script defer src="/javascript/galleryOnLoadAnimation.js"></script>
     <!-- <script defer src="slideshow.js"></script> -->
     <script defer src="/javascript/imagePanels.js"></script>
-</head>
-    <body>
+  </head>
+  <body>
+    <div id="topPanel">
+      <div class="hiddenLeft" id="topText">
+        <h2>Gallery</h2>
+        <p>Some finished art I made.</p>
+        <hr />
 
-        <div id="topPanel">
-            <div class="hiddenLeft" id="topText">
-                <h2>Gallery</h2>
-                <p>Some finished art I made.</p>
-                <hr>
-
-                <div id="buttonContainer">
-                    <a href="/index.html">home</a>
-                    <a href="/html/d2.html">xur</a>
-                </div>
-            </div>
-
-            <div id="blobs">
-                <div class="blob alpha"></div>
-                <div class="blob beta"></div>
-                <div class="blob gamma"></div>
-            </div>
+        <div id="buttonContainer">
+          <a href="/index.html">home</a>
+          <!-- <a href="/html/d2.html">xur</a> -->
         </div>
+      </div>
 
-        <div id="tripleImage">
-            <div class="box" id="one"><img src="/images/anime_teapot.png"></div>
-            <div class="box" id="two"><img src="/images/teapot002.png"></div>
-            <div class="box" id="three"><img src="/images/teapot003.png"></div>
+      <div id="blobs">
+        <div class="blob alpha"></div>
+        <div class="blob beta"></div>
+        <div class="blob gamma"></div>
+      </div>
+    </div>
 
-            <!-- <div id="indicators">
+    <div id="tripleImage">
+      <div class="box" id="one"><img src="/images/anime_teapot.png" /></div>
+      <div class="box" id="two"><img src="/images/teapot002.png" /></div>
+      <div class="box" id="three"><img src="/images/teapot003.png" /></div>
+
+      <!-- <div id="indicators">
                 <button onclick="setDiv(1)"></button>
                 <button onclick="setDiv(2)"></button>
                 <button onclick="setDiv(3)"></button>
             </div> -->
-        </div>
+    </div>
 
-        <div class="row">
-            <div class="col left">
-                <img class="hiddenLeft" src="/images/FINALBLENDERRENDERROOMLETSGOOOO.png">
-                <img class="hiddenLeft" src="/images/test_render.png">
-                <img class="hiddenLeft" src="/images/final_fox2.png">
-            </div>
-            
-            <div class="col right">
-                <img class="hiddenRight" src="/images/procedural01.png">
-                <img class="hiddenRight" src="/images/test_render (1) (1).png">
-                <img class="hiddenRight" src="/images/derp.png">
-            </div>
-        </div>
-        
-    </body>
+    <div class="row">
+      <div class="col left">
+        <img
+          class="hiddenLeft"
+          src="/images/FINALBLENDERRENDERROOMLETSGOOOO.png"
+        />
+        <img class="hiddenLeft" src="/images/test_render.png" />
+        <img class="hiddenLeft" src="/images/final_fox2.png" />
+      </div>
+
+      <div class="col right">
+        <img class="hiddenRight" src="/images/procedural01.png" />
+        <img class="hiddenRight" src="/images/test_render (1) (1).png" />
+        <img class="hiddenRight" src="/images/derp.png" />
+      </div>
+    </div>
+  </body>
 </html>
