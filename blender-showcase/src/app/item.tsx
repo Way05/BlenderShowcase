@@ -6,7 +6,7 @@ type ItemProps = {
 export default function Item({ title, image }: ItemProps) {
     return (
         <div
-            className="bg-gray m-auto flex h-8/10 w-8/10 items-end rounded-2xl"
+            className="bg-gray m-auto flex h-80 w-100 items-end rounded-2xl"
             style={{
                 backgroundImage: `url(${image})`,
                 backgroundSize: "covers",

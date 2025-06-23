@@ -11,7 +11,10 @@ export default function Home() {
                 </div>
                 <div className="bg-black"></div>
             </div>
-            <div className="m-10 grid h-full grid-cols-3 bg-white">
+            <div className="mr-10 ml-10 grid h-fit grid-cols-3 gap-y-10 bg-white pt-10 pb-10">
+                <Item title="test" image="/images/anime_teapot.png"></Item>
+                <Item title="test" image="/images/anime_teapot.png"></Item>
+                <Item title="test" image="/images/anime_teapot.png"></Item>
                 <Item title="test" image="/images/anime_teapot.png"></Item>
             </div>
         </div>
