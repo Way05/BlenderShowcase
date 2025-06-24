@@ -16,7 +16,7 @@ export default function Item(props: ItemProps) {
             onClick={() => {
                 if (!isOpen) setIsOpen(true);
             }}
-            className="bg-gray m-auto h-80 w-100 items-end rounded-2xl shadow-md shadow-black"
+            className="bg-gray m-auto h-80 w-100 items-end rounded-2xl shadow-lg shadow-black transition hover:shadow-xl"
         >
             <div className="relative h-9/10">
                 <Image
@@ -34,7 +34,7 @@ export default function Item(props: ItemProps) {
             <ItemModal
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
-                title="test modal"
+                title={props.title}
                 image="/images/anime_teapot.png"
                 description="a test of the modal"
             ></ItemModal>
