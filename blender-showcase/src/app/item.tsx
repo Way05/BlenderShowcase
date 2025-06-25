@@ -7,6 +7,7 @@ import ItemModal from "./itemModal";
 type ItemProps = {
     title: string;
     images: string[];
+    description: string;
 };
 
 export default function Item(props: ItemProps) {
@@ -36,7 +37,7 @@ export default function Item(props: ItemProps) {
                 onClose={() => setIsOpen(false)}
                 title={props.title}
                 images={props.images}
-                description="a test of the modal"
+                description={props.description}
             ></ItemModal>
         </div>
     );

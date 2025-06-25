@@ -19,10 +19,8 @@ export default function Home() {
                         "/images/teapot002.png",
                         "/images/teapot003.png",
                     ]}
+                    description="A teapot and cup set created in Blender, rendered with Cycles. A bit of shader practice too."
                 ></Item>
-                <Item title="test" images={["/images/anime_teapot.png"]}></Item>
-                <Item title="test" images={["/images/anime_teapot.png"]}></Item>
-                <Item title="test" images={["/images/anime_teapot.png"]}></Item>
             </div>
         </div>
     );
