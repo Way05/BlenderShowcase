@@ -6,7 +6,7 @@ import ItemModal from "./itemModal";
 
 type ItemProps = {
     title: string;
-    image: string;
+    images: string[];
 };
 
 export default function Item(props: ItemProps) {
@@ -20,7 +20,7 @@ export default function Item(props: ItemProps) {
         >
             <div className="relative h-9/10">
                 <Image
-                    src={props.image}
+                    src={props.images[0]}
                     alt={props.title}
                     fill
                     objectFit="cover"
@@ -35,7 +35,7 @@ export default function Item(props: ItemProps) {
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
                 title={props.title}
-                image="/images/anime_teapot.png"
+                images={props.images}
                 description="a test of the modal"
             ></ItemModal>
         </div>

@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Slideshow from "./slideshow";
 
 type ItemModalProps = {
     isOpen: boolean;
     onClose: () => void;
     title: string;
-    image: string;
+    images: string[];
     description: string;
 };
 
@@ -23,13 +23,7 @@ export default function ItemModal(props: ItemModalProps) {
                     <p>{props.description}</p>
                 </div>
                 <div className="relative col-span-4 rounded-2xl bg-white">
-                    <Image
-                        src={props.image}
-                        alt=""
-                        fill
-                        objectFit="cover"
-                        className="rounded-2xl"
-                    ></Image>
+                    <Slideshow images={props.images}></Slideshow>
                 </div>
             </div>
         </div>
