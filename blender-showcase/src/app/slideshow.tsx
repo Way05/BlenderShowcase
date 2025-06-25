@@ -8,7 +8,7 @@ type SlideshowProps = {
 export default function Slideshow(props: SlideshowProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     return (
-        <div className="relative h-full w-full overflow-hidden">
+        <div className="relative h-full w-full overflow-hidden bg-black">
             <div
                 className="flex h-full transition duration-100"
                 style={{
@@ -16,7 +16,11 @@ export default function Slideshow(props: SlideshowProps) {
                 }}
             >
                 {props.images.map((image, index) => (
-                    <img src={image} key={index} className="object-cover" />
+                    <img
+                        src={image}
+                        key={index}
+                        className="rounded-2xl object-cover"
+                    />
                     // <div key={index} className="w- flex h-full">
                     /* <Image
                             src={image}
@@ -35,7 +39,7 @@ export default function Slideshow(props: SlideshowProps) {
                         <div
                             onClick={() => setCurrentIndex(index)}
                             key={index}
-                            className={`h-3 w-5 bg-white transition ${currentIndex === index ? "opacity-100" : "opacity-50"}`}
+                            className={`h-1 w-20 bg-white transition ${currentIndex === index ? "opacity-100" : "opacity-50"}`}
                         ></div>
                     ))}
                 </div>
