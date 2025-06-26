@@ -18,7 +18,7 @@ export default function Item(props: ItemProps) {
             onClick={() => {
                 if (!isOpen) setIsOpen(true);
             }}
-            className="bg-gray m-auto h-80 w-100 items-end rounded-2xl shadow-lg shadow-black transition hover:shadow-xl"
+            className="bg-gray m-auto h-80 w-100 items-end rounded-2xl"
         >
             <div className="relative h-9/10">
                 <Image
@@ -26,10 +26,10 @@ export default function Item(props: ItemProps) {
                     alt={props.title}
                     fill
                     objectFit="cover"
-                    className="rounded-2xl"
+                    className="cursor-pointer rounded-2xl shadow-md shadow-black transition hover:scale-105 hover:shadow-lg"
                 ></Image>
             </div>
-            <p className="h-1/10 w-full rounded-2xl bg-white pl-1 text-xl">
+            <p className="h-1/10 w-full cursor-pointer bg-white p-1 pt-3 text-xl transition hover:underline">
                 {props.title}
             </p>
 
