@@ -1,4 +1,7 @@
+"use client";
 import Item from "./item";
+import ModelScene from "./modelScene";
+import { Canvas } from "@react-three/fiber";
 
 export default function Home() {
     return (
@@ -9,7 +12,11 @@ export default function Home() {
                         Hi, I&apos;m Way.<br></br>I also do 3D modeling.
                     </h1>
                 </div>
-                <div className="bg-black"></div>
+                <div className="bg-black">
+                    <Canvas className="h-full w-full">
+                        <ModelScene></ModelScene>
+                    </Canvas>
+                </div>
             </div>
             <div className="mr-10 ml-10 grid h-fit grid-cols-3 gap-y-10 bg-white pt-10 pb-10">
                 <Item
