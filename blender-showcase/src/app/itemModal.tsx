@@ -17,15 +17,15 @@ export default function ItemModal(props: ItemModalProps) {
         >
             <div
                 onClick={(e) => e.stopPropagation()}
-                className={`bg-opacity-75 grid h-2/3 ${props.square ? "w-fit grid-cols-3" : "w-2/3 grid-cols-5"} rounded-2xl bg-black p-5 text-white shadow-lg transition ${props.isOpen ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}
+                className={`bg-opacity-75 grid h-2/3 ${props.square ? "aspect-5/4 grid-cols-4" : "w-2/3 grid-cols-5"} rounded-2xl bg-black p-5 text-white shadow-lg transition ${props.isOpen ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}
             >
-                <div className="pr-5">
+                <div className="col-span-1 pr-5">
                     <p className="pt-5 text-2xl">{props.title}</p>
                     <hr className="mt-5 mb-5 w-10"></hr>
                     <p>{props.description}</p>
                 </div>
                 <div
-                    className={`relative ${props.square ? "col-span-2 aspect-square" : "col-span-4"} overflow-hidden rounded-2xl bg-white`}
+                    className={`relative ${props.square ? "col-span-3" : "col-span-4"} overflow-hidden rounded-2xl bg-white`}
                 >
                     <div className="h-full w-full">
                         <Slideshow images={props.images}></Slideshow>

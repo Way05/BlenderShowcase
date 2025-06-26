@@ -39,6 +39,12 @@ export default function Home() {
                     square={true}
                 ></Item>
                 <Item
+                    title="Isometric Bedroom"
+                    images={["/images/isometric_room.png"]}
+                    description="My first Blender project. A simple isometric bedroom scene to learn the fundamentals of 3D modeling."
+                    square={true}
+                ></Item>
+                <Item
                     title="Posterity"
                     images={[
                         "/images/posterity1.png",
