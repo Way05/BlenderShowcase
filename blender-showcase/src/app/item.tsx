@@ -8,6 +8,7 @@ type ItemProps = {
     title: string;
     images: string[];
     description: string;
+    square?: boolean;
 };
 
 export default function Item(props: ItemProps) {
@@ -38,6 +39,7 @@ export default function Item(props: ItemProps) {
                 title={props.title}
                 images={props.images}
                 description={props.description}
+                square={props.square}
             ></ItemModal>
         </div>
     );

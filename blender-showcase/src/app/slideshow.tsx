@@ -8,7 +8,7 @@ type SlideshowProps = {
 export default function Slideshow(props: SlideshowProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     return (
-        <div className="relative h-full w-full overflow-hidden bg-black">
+        <div className="relative h-full w-fit overflow-hidden bg-black">
             <div
                 className="flex h-full transition duration-100"
                 style={{
@@ -19,7 +19,7 @@ export default function Slideshow(props: SlideshowProps) {
                     <img
                         src={image}
                         key={index}
-                        className="rounded-2xl object-cover"
+                        className="h-full rounded-2xl object-cover"
                     />
                     // <div key={index} className="w- flex h-full">
                     /* <Image
