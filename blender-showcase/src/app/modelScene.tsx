@@ -1,9 +1,9 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function ModelScene() {
-    const [hovered, hover] = useState(false);
+    const [hovered, setHover] = useState(false);
     const [rotAmt, setRotAmt] = useState(0.01);
 
     const obj = React.useRef<Mesh>(null);
@@ -14,14 +14,19 @@ export default function ModelScene() {
             currObj.rotation.x += rotAmt;
             currObj.rotation.y += rotAmt;
         }
+
+        hovered
+            ? (document.body.style.cursor = "crosshair")
+            : (document.body.style.cursor = "default");
     });
+
     return (
         // <div className="h-full w-full">
         //     <Canvas>
         <mesh
             ref={obj}
-            onPointerOver={(event) => hover(true)}
-            onPointerOut={(event) => hover(false)}
+            onPointerOver={(event) => setHover(true)}
+            onPointerOut={(event) => setHover(false)}
         >
             <boxGeometry args={[2, 2, 2]}></boxGeometry>
             <meshStandardMaterial
