@@ -26,7 +26,7 @@ export default function Item(props: ItemProps) {
                     alt={props.title}
                     fill
                     objectFit="cover"
-                    className="cursor-pointer rounded-2xl shadow-md shadow-black transition hover:scale-105 hover:shadow-lg"
+                    className="h-full cursor-pointer rounded-2xl bg-black shadow-md shadow-black transition hover:scale-105 hover:shadow-lg"
                 ></Image>
             </div>
             <p className="h-1/10 w-full cursor-pointer bg-white p-1 pt-3 text-xl transition hover:underline">

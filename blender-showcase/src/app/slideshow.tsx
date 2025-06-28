@@ -14,12 +14,26 @@ export default function Slideshow(props: SlideshowProps) {
                     transform: `translateX(-${currentIndex * 100}%)`,
                 }}
             >
-                {props.images.map((image, index) => (
-                    <img
-                        src={image}
-                        key={index}
-                        className="h-full rounded-2xl object-cover"
-                    />
+                {props.images.map((image, index) => {
+                    if (image.endsWith(".png")) {
+                        return (
+                            <img
+                                src={image}
+                                key={index}
+                                className="h-full rounded-2xl object-cover"
+                            />
+                        );
+                    } else if (image.endsWith(".mp4")) {
+                        return (
+                            <video
+                                key={index}
+                                className="h-full rounded-2xl object-cover"
+                                controls
+                            >
+                                <source src={image} type="video/mp4"></source>
+                            </video>
+                        );
+                    }
                     // <div key={index} className="w- flex h-full">
                     /* <Image
                             src={image}
@@ -29,7 +43,7 @@ export default function Slideshow(props: SlideshowProps) {
                             className="rounded-2xl"
                         ></Image> */
                     // </div>
-                ))}
+                })}
             </div>
 
             <div className="absolute right-0 bottom-4 left-0">
