@@ -8,9 +8,17 @@ export default function Home() {
         <div className="fullscreen">
             <div className="grid h-screen grid-cols-2">
                 <div className="flex items-center justify-center bg-black">
-                    <h1 className="m-auto flex aspect-square items-center rounded-2xl p-10 text-4xl text-white shadow-2xl shadow-white">
-                        Hi, I&apos;m Way.<br></br>I also do 3D modeling.
-                    </h1>
+                    <div className="rounded-2xl bg-linear-to-br from-black via-blue-500 to-blue-200 p-0.5">
+                        <h1 className="m-auto flex items-center rounded-2xl bg-black p-10 text-4xl text-white">
+                            <span>
+                                Hi, I&apos;m{" "}
+                                <span className="bg-linear-to-r from-white to-blue-500 bg-clip-text text-transparent">
+                                    Way
+                                </span>
+                                .<br></br>I also do 3D modeling.
+                            </span>
+                        </h1>
+                    </div>
                 </div>
                 <div className="h-screen bg-black">
                     <Canvas className="h-full w-full">
@@ -62,6 +70,9 @@ export default function Home() {
                     description="Katana mounted on wall. No textures, just a simple model. Rendered in different grayscales for some reason..."
                 ></Item>
             </div>
+            <footer className="text-center">
+                - Thanks for visiting &lt;3 -
+            </footer>
         </div>
     );
 }
