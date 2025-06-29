@@ -57,7 +57,7 @@ export default function Home() {
                     images={[
                         "/images/posterity1.png",
                         "/images/posterity2.png",
-                        "/videos/posterity.mp4",
+                        // "/videos/posterity.mp4",
                     ]}
                     description="A weapon from Destiny 2. Modeled from reference images. Proportions are slightly off, but the resemblance is there."
                 ></Item>
@@ -70,11 +70,11 @@ export default function Home() {
                     ]}
                     description="Katana mounted on wall. No textures, just a simple model. Rendered in different grayscales for some reason..."
                 ></Item>
-                <Item
+                {/* <Item
                     title="First Animation"
                     images={["/videos/selfProject.mp4"]}
                     description="bad"
-                ></Item>
+                ></Item> */}
             </div>
             <footer className="text-center">
                 - Thanks for visiting &lt;3 -
