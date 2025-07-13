@@ -45,16 +45,16 @@ export default function Slideshow(props: SlideshowProps) {
                     // </div>
                 })}
             </div>
-
             <div className="absolute right-0 bottom-4 left-0">
                 <div className="flex items-center justify-center gap-2">
-                    {props.images.map((_, index) => (
-                        <div
-                            onClick={() => setCurrentIndex(index)}
-                            key={index}
-                            className={`h-1 w-20 bg-white transition ${currentIndex === index ? "opacity-100" : "opacity-50"} cursor-pointer hover:scale-y-200`}
-                        ></div>
-                    ))}
+                    {props.images.length > 1 &&
+                        props.images.map((_, index) => (
+                            <div
+                                onClick={() => setCurrentIndex(index)}
+                                key={index}
+                                className={`h-1 w-20 bg-white transition ${currentIndex === index ? "opacity-100" : "opacity-50"} cursor-pointer hover:scale-y-200`}
+                            ></div>
+                        ))}
                 </div>
             </div>
         </div>
