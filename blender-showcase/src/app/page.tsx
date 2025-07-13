@@ -70,11 +70,11 @@ export default function Home() {
                     ]}
                     description="Katana mounted on wall. No textures, just a simple model. Rendered in different grayscales for some reason..."
                 ></Item>
-                {/* <Item
+                <Item
                     title="First Animation"
                     images={["/videos/selfProject.mp4"]}
                     description="bad"
-                ></Item> */}
+                ></Item>
             </div>
             <footer className="text-center">
                 - Thanks for visiting &lt;3 -
