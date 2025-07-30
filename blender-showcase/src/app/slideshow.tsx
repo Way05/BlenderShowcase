@@ -19,7 +19,10 @@ export default function Slideshow(props: SlideshowProps) {
                 {props.images.map((image, index) => {
                     if (image.endsWith(".png")) {
                         return (
-                            <div key={index} className="relative h-full w-2/1">
+                            <div
+                                key={index}
+                                className={`relative h-full w-${len}/1`}
+                            >
                                 <Image
                                     src={image}
                                     className="relative h-full rounded-2xl object-cover"
