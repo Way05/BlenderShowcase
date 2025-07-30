@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 
 type SlideshowProps = {
     images: string[];
@@ -6,22 +7,26 @@ type SlideshowProps = {
 
 export default function Slideshow(props: SlideshowProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const len = props.images.length;
     return (
-        <div className="relative h-full w-fit overflow-hidden bg-black">
+        <div className="relative h-full overflow-hidden bg-black">
             <div
-                className="flex h-full transition duration-100"
+                className={`w-${len}/1 flex h-full transition duration-100`}
                 style={{
-                    transform: `translateX(-${currentIndex * 100}%)`,
+                    transform: `translateX(-${currentIndex * (1 / len) * 100}%)`,
                 }}
             >
                 {props.images.map((image, index) => {
                     if (image.endsWith(".png")) {
                         return (
-                            <img
-                                src={image}
-                                key={index}
-                                className="h-full rounded-2xl object-cover"
-                            />
+                            <div key={index} className="relative h-full w-2/1">
+                                <Image
+                                    src={image}
+                                    className="relative h-full rounded-2xl object-cover"
+                                    alt=""
+                                    fill
+                                />
+                            </div>
                         );
                     } else if (image.endsWith(".mp4")) {
                         return (
@@ -34,18 +39,9 @@ export default function Slideshow(props: SlideshowProps) {
                             </video>
                         );
                     }
-                    // <div key={index} className="w- flex h-full">
-                    /* <Image
-                            src={image}
-                            alt=""
-                            fill
-                            objectFit="cover"
-                            className="rounded-2xl"
-                        ></Image> */
-                    // </div>
                 })}
             </div>
-            <div className="absolute right-0 bottom-4 left-0">
+            <div className="absolute right-0 bottom-4 left-0 w-full">
                 <div className="flex items-center justify-center gap-2">
                     {props.images.length > 1 &&
                         props.images.map((_, index) => (
