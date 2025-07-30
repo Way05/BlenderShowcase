@@ -7,25 +7,22 @@ type SlideshowProps = {
 
 export default function Slideshow(props: SlideshowProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const len = props.images.length;
+    // const len = props.images.length;
     return (
-        <div className="relative h-full overflow-hidden bg-black">
+        <div className="relative h-full w-full overflow-hidden bg-black">
             <div
-                className={`w-${len}/1 flex h-full transition duration-100`}
+                className="relative h-full w-full transition duration-100"
                 style={{
-                    transform: `translateX(-${currentIndex * (1 / len) * 100}%)`,
+                    transform: `translateY(-${currentIndex * 100}%)`,
                 }}
             >
                 {props.images.map((image, index) => {
                     if (image.endsWith(".png")) {
                         return (
-                            <div
-                                key={index}
-                                className={`relative h-full w-${len}/1`}
-                            >
+                            <div key={index} className="relative h-full w-full">
                                 <Image
                                     src={image}
-                                    className="relative h-full rounded-2xl object-cover"
+                                    className="rounded-2xl object-cover"
                                     alt=""
                                     fill
                                 />
