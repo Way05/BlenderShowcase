@@ -6,7 +6,7 @@ type SlideshowProps = {
 };
 
 export default function Slideshow(props: SlideshowProps) {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
     // const len = props.images.length;
     return (
         <div className="relative h-full w-full overflow-hidden bg-black">

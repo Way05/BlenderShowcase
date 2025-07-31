@@ -4,8 +4,8 @@ import { Mesh } from "three";
 import React, { useState } from "react";
 
 export default function ModelScene() {
-    const [hovered, setHover] = useState(false);
-    const [rotAmt, setRotAmt] = useState(0.01);
+    const [hovered, setHover] = useState<boolean>(false);
+    const [rotAmt, setRotAmt] = useState<number>(0.01);
 
     const obj = React.useRef<Mesh>(null);
     useFrame(({}) => {

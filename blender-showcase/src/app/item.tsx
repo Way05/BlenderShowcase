@@ -12,9 +12,9 @@ type ItemProps = {
 };
 
 export default function Item(props: ItemProps) {
-    const [thumbnail, setThumbnail] = useState(props.images[0]);
-    const [objectFit, setObjectFit] = useState("cover");
-    const [isOpen, setIsOpen] = useState(false);
+    const [thumbnail, setThumbnail] = useState<string>(props.images[0]);
+    const [objectFit, setObjectFit] = useState<string>("cover");
+    const [isOpen, setIsOpen] = useState<boolean>(false);
     return (
         <div
             onClick={() => {
