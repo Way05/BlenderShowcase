@@ -1,3 +1,4 @@
+"use client";
 import { useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
 import React, { useState } from "react";
