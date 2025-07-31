@@ -1,4 +1,5 @@
-"use client";
+// "use client";
+import CanvasWrapper from "./canvasWrapper";
 import Item from "./item";
 import ModelScene from "./modelScene";
 import { Canvas } from "@react-three/fiber";
@@ -21,9 +22,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="h-screen bg-black">
-                    <Canvas className="h-full w-full">
-                        <ModelScene></ModelScene>
-                    </Canvas>
+                    <CanvasWrapper />
                 </div>
             </div>
             <div className="mr-10 ml-10 grid h-fit grid-cols-3 gap-y-10 bg-white pt-10 pb-10">
