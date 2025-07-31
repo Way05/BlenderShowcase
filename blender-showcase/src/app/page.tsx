@@ -1,8 +1,6 @@
 // "use client";
 import CanvasWrapper from "./canvasWrapper";
 import Item from "./item";
-import ModelScene from "./modelScene";
-import { Canvas } from "@react-three/fiber";
 
 export default function Home() {
     return (
